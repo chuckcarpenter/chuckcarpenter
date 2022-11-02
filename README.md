@@ -16,6 +16,9 @@
 - ⚡ Fun fact: I'm an avid fan of Manchester United Football Club ⚽️
 
 <img src="https://github-readme-stats.vercel.app/api?username=chuckcarpenter&&show_icons=true" alt="" role="presentation" />
+<a href="https://astro.badg.es/v1/contributor/chuckcarpenter/">
+  <img src="https://astro.badg.es/v1/contributor/chuckcarpenter.svg" alt="@chuckcarpenter Astro contributions" width="300" height="200">
+</a>
 <!--
 
 - 🔭 I’m currently working on a serverless JSON:API spec API
