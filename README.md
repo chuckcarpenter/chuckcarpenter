@@ -1,18 +1,18 @@
 ```
        Chuck Carpenter / chuckcarpenter
 
-       Work: Partner @ShipShapeCode
+       Work: Founder @ShepherdPro
 
         npm: https://www.npmjs.com/~chuckcarpenter
      GitHub: https://github.com/chuckcarpenter
    LinkedIn: https://www.linkedin.com/in/chuckcarpenter
-        Web: https://shipshape.io
+        Web: https://shepherdpro.com https://whiskey.fm
 
        Card: npx chuckcarpenter
 ```
 
-- 🔭 I’m currently working on a serverless JSON:API spec API
-- 🌱 I’m currently learning kubernetes
+- 🔭 I’m currently working on Shepherd Pro and the associated OS packages
+- 🌱 I’m currently learning Italian
 - ⚡ Fun fact: I'm an avid fan of Manchester United Football Club ⚽️
 
 <img src="https://github-readme-stats.vercel.app/api?username=chuckcarpenter&&show_icons=true" alt="" role="presentation" />
@@ -21,8 +21,8 @@
 </a>
 <!--
 
-- 🔭 I’m currently working on a serverless JSON:API spec API
-- 🌱 I’m currently learning kubernetes
+- 🔭 I’m currently working on Shepherd Pro and the associated OS packages
+- 🌱 I’m currently learning Italian
 - 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
 - 💬 Ask me about ...
