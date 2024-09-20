@@ -1,18 +1,17 @@
 ```
        Chuck Carpenter / chuckcarpenter
 
-       Work: Founder @ShepherdPro
-
+       Work: Partner @ShipShapeCode
         npm: https://www.npmjs.com/~chuckcarpenter
      GitHub: https://github.com/chuckcarpenter
    LinkedIn: https://www.linkedin.com/in/chuckcarpenter
-        Web: https://shepherdpro.com https://whiskey.fm
+        Web: https://shipshape.io https://whiskey.fm
 
        Card: npx chuckcarpenter
 ```
 
-- 🔭 I’m currently working on Shepherd Pro and the associated OS packages
-- 🌱 I’m currently learning Italian
+- 🔭 I’m currently working on an admin site for https://www.swach.io/
+- 🌱 I’m currently learning Italian and Ruby on Rails
 - ⚡ Fun fact: I'm an avid fan of Manchester United Football Club ⚽️
 
 <img src="https://github-readme-stats.vercel.app/api?username=chuckcarpenter&&show_icons=true" alt="" role="presentation" />
@@ -21,7 +20,7 @@
 </a>
 <!--
 
-- 🔭 I’m currently working on Shepherd Pro and the associated OS packages
+- 🔭 I’m currently working on...
 - 🌱 I’m currently learning Italian
 - 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
