@@ -1,31 +1,45 @@
-```
-       Chuck Carpenter / chuckcarpenter
+<table align="right" cellpadding="0" cellspacing="0" border="0">
+<tr><td align="left" valign="top">
+<sub>
 
-       Work: Partner @ShipShapeCode
-        npm: https://www.npmjs.com/~chuckcarpenter
-     GitHub: https://github.com/chuckcarpenter
-   LinkedIn: https://www.linkedin.com/in/chuckcarpenter
-        Web: https://shipshape.io https://whiskey.fm
+**Role** — Head of Engineering<br>
+**Company** — [Anagram](https://www.anagramsecurity.com)<br>
+**Location** — Como, Italy<br>
+**Maintaining** — [shepherd](https://github.com/shipshapecode/shepherd)<br>
+**Online** — chuckcarpenter, since the late nineties<br>
 
-       Card: npx chuckcarpenter
-```
+</sub>
+</td></tr>
+</table>
 
-- 🔭 I’m currently working on an admin site for https://www.swach.io/
-- 🌱 I’m currently learning Italian and Ruby on Rails
-- ⚡ Fun fact: I'm an avid fan of Manchester United Football Club ⚽️
+# Chuck Carpenter
 
-<img src="https://github-readme-stats.vercel.app/api?username=chuckcarpenter&&show_icons=true" alt="" role="presentation" />
-<a href="https://astro.badg.es/v1/contributor/chuckcarpenter/">
-  <img src="https://astro.badg.es/v1/contributor/chuckcarpenter.svg" alt="@chuckcarpenter Astro contributions" width="300" height="200">
-</a>
-<!--
+A working notebook of professional and unprofessional pursuits, kept mostly in plain text.
 
-- 🔭 I’m currently working on...
-- 🌱 I’m currently learning Italian
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+### vocation
+
+I am Head of Engineering at [Anagram](https://www.anagramsecurity.com), where we build security awareness training that does not insult the people taking it — gamified, evidence-backed, with phishing simulations driven by language models that are, occasionally, smarter than the people they are testing. Previously partner at ShipShape, now dormant; the work that came out of it remains useful.
+
+### open source
+
+I maintain [**shepherd**](https://github.com/shipshapecode/shepherd), a JavaScript library for guided product tours. It has been quietly walking users through software since 2014. I contribute to [Astro](https://astro.build) core and to [Swach](https://swach.io).
+
+### avocation
+
+I co-host [**whiskey.fm**](https://whiskey.fm), a podcast about the trade and the spirit. I live in Como. I am learning Italian, slowly, and Ruby on Rails, more slowly. I support Manchester United for reasons I am no longer in a position to fully justify.
+
+---
+
+### reach
+
+[linkedin](https://www.linkedin.com/in/chuckcarpenter/) &nbsp;·&nbsp; [x](https://x.com/chuckcarpenter) &nbsp;·&nbsp; [npm](https://www.npmjs.com/~chuckcarpenter) &nbsp;·&nbsp; `npx chuckcarpenter` for the terminal card
+
+---
+
+<sub>
+
+**Colophon.** No banner. No badges. No tracking pixels. Set in whatever sans-serif GitHub has decided is appropriate this quarter. Last revised May 2026.
+
+</sub>
