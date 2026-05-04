@@ -29,7 +29,7 @@
 
   <!-- Top metadata band -->
   <text x="40"  y="62" class="label ink-3" font-size="11" font-weight="700">NOTES FROM THE WORKBENCH</text>
-  <text x="860" y="62" class="label ink-3" font-size="11" font-weight="700" text-anchor="end">VOL. XXVI &#183; MAY 2026 &#183; COMO</text>
+  <text x="860" y="62" class="label ink-3" font-size="11" font-weight="700" text-anchor="end">VOL. XXVI &#183; COMO, ITALY</text>
 
   <!-- Mid rule -->
   <line x1="40" y1="82" x2="860" y2="82" class="rule-thin" stroke-width="0.6" />

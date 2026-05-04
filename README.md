@@ -29,5 +29,9 @@ npx chuckcarpenter
 <sub>A terminal-rendered version of this page, for the discerning command-line reader.</sub>
 
 <p align="center">
+  <img src="./stats.svg" alt="By the numbers — 13,700 stars on shepherd, 714 stars on REM-unit-polyfill, 36 public repositories, 15 years on GitHub." width="100%" />
+</p>
+
+<p align="center">
   <img src="./colophon.svg" alt="Colophon — no banner, no badges, no tracking pixels. Last revised May 2026." width="100%" />
 </p>
