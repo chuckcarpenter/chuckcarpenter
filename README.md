@@ -34,7 +34,15 @@ I co-host [**whiskey.fm**](https://whiskey.fm), a podcast about the trade and th
 
 ### reach
 
-[linkedin](https://www.linkedin.com/in/chuckcarpenter/) &nbsp;·&nbsp; [x](https://x.com/chuckcarpenter) &nbsp;·&nbsp; [npm](https://www.npmjs.com/~chuckcarpenter) &nbsp;·&nbsp; `npx chuckcarpenter` for the terminal card
+[linkedin](https://www.linkedin.com/in/chuckcarpenter/) &nbsp;·&nbsp; [x](https://x.com/chuckcarpenter) &nbsp;·&nbsp; [npm](https://www.npmjs.com/~chuckcarpenter)
+
+### card
+
+```
+npx chuckcarpenter
+```
+
+<sub>A terminal-rendered version of this page, for the discerning command-line reader.</sub>
 
 ---
 
