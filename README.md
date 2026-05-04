@@ -1,22 +1,6 @@
-<table align="right" cellpadding="0" cellspacing="0" border="0">
-<tr><td align="left" valign="top">
-<sub>
-
-**Role** — Head of Engineering<br>
-**Company** — [Anagram](https://www.anagramsecurity.com)<br>
-**Location** — Como, Italy<br>
-**Maintaining** — [shepherd](https://github.com/shipshapecode/shepherd)<br>
-**Online** — chuckcarpenter, since the late nineties<br>
-
-</sub>
-</td></tr>
-</table>
-
-# Chuck Carpenter
-
-A working notebook of professional and unprofessional pursuits, kept mostly in plain text.
-
----
+<p align="center">
+  <img src="./masthead.svg" alt="Chuck Carpenter — Notes from the Workbench. Vol. XXVI, May 2026, Como. Head of Engineering, Anagram. Established MM." width="100%" />
+</p>
 
 ### vocation
 
@@ -44,10 +28,6 @@ npx chuckcarpenter
 
 <sub>A terminal-rendered version of this page, for the discerning command-line reader.</sub>
 
----
-
-<sub>
-
-**Colophon.** No banner. No badges. No tracking pixels. Set in whatever sans-serif GitHub has decided is appropriate this quarter. Last revised May 2026.
-
-</sub>
+<p align="center">
+  <img src="./colophon.svg" alt="Colophon — no banner, no badges, no tracking pixels. Last revised May 2026." width="100%" />
+</p>

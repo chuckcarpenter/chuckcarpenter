@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 130" role="img" aria-labelledby="colophon-title">
+  <title id="colophon-title">Colophon — last revised May 2026</title>
+  <style><![CDATA[
+    .body  { font-family: "Hoefler Text", "Garamond", Georgia, "Times New Roman", serif; }
+    .label { font-family: "Helvetica Neue", "Inter", Helvetica, Arial, sans-serif; letter-spacing: 0.32em; }
+
+    .ink-2 { fill: #374151; }
+    .ink-3 { fill: #6B7280; }
+    .ink-4 { fill: #9CA3AF; }
+
+    .rule-thick { stroke: #1F2937; }
+    .rule-thin  { stroke: #D1D5DB; }
+
+    @media (prefers-color-scheme: dark) {
+      .ink-2 { fill: #E5E7EB; }
+      .ink-3 { fill: #9CA3AF; }
+      .ink-4 { fill: #6B7280; }
+      .rule-thick { stroke: #E5E7EB; }
+      .rule-thin  { stroke: #4B5563; }
+    }
+  ]]></style>
+
+  <!-- Top double rule -->
+  <line x1="40" y1="14" x2="860" y2="14" class="rule-thick" stroke-width="2" />
+  <line x1="40" y1="20" x2="860" y2="20" class="rule-thick" stroke-width="0.5" />
+
+  <!-- Section label -->
+  <text x="450" y="46" class="label ink-4" font-size="10" font-weight="700" text-anchor="middle">— COLOPHON —</text>
+
+  <!-- Body lines -->
+  <text x="450" y="74" class="body ink-3" font-size="13" font-style="italic" text-anchor="middle">No banner. No badges. No tracking pixels.</text>
+  <text x="450" y="94" class="body ink-3" font-size="13" font-style="italic" text-anchor="middle">Set in whatever serif your renderer can find. Last revised May 2026.</text>
+
+  <!-- Bottom thin rule -->
+  <line x1="40" y1="116" x2="860" y2="116" class="rule-thin" stroke-width="0.5" />
+</svg>
