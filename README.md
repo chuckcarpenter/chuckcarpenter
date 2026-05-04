@@ -12,7 +12,7 @@ I maintain [**shepherd**](https://github.com/shipshapecode/shepherd), a JavaScri
 
 ### avocation
 
-I co-host [**whiskey.fm**](https://whiskey.fm), a podcast about the trade and the spirit. I live in Como. I am learning Italian, slowly, and Ruby on Rails, more slowly. I support Manchester United for reasons I am no longer in a position to fully justify.
+I sometimes co-host [**whiskey.fm**](https://whiskey.fm), a podcast about the trade and the spirit. I live in Como. I am learning Italian, slowly, and building a homelab, more slowly. I support Manchester United and so should you.
 
 ---
 
