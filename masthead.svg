@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 310" role="img" aria-labelledby="masthead-title">
+  <title id="masthead-title">Chuck Carpenter — Notes from the Workbench</title>
+  <style><![CDATA[
+    .display { font-family: "Hoefler Text", "Garamond Premier Pro", "Garamond", "Times New Roman", Georgia, serif; }
+    .body    { font-family: "Hoefler Text", "Garamond", Georgia, "Times New Roman", serif; }
+    .label   { font-family: "Helvetica Neue", "Inter", Helvetica, Arial, sans-serif; letter-spacing: 0.22em; }
+
+    .ink-1 { fill: #111827; }
+    .ink-2 { fill: #374151; }
+    .ink-3 { fill: #6B7280; }
+    .ink-4 { fill: #9CA3AF; }
+
+    .rule-thick { stroke: #1F2937; }
+    .rule-thin  { stroke: #D1D5DB; }
+
+    @media (prefers-color-scheme: dark) {
+      .ink-1 { fill: #F9FAFB; }
+      .ink-2 { fill: #E5E7EB; }
+      .ink-3 { fill: #9CA3AF; }
+      .ink-4 { fill: #6B7280; }
+      .rule-thick { stroke: #E5E7EB; }
+      .rule-thin  { stroke: #4B5563; }
+    }
+  ]]></style>
+
+  <!-- Top double rule -->
+  <line x1="40" y1="32" x2="860" y2="32" class="rule-thick" stroke-width="2.5" />
+  <line x1="40" y1="40" x2="860" y2="40" class="rule-thick" stroke-width="0.6" />
+
+  <!-- Top metadata band -->
+  <text x="40"  y="62" class="label ink-3" font-size="11" font-weight="700">NOTES FROM THE WORKBENCH</text>
+  <text x="860" y="62" class="label ink-3" font-size="11" font-weight="700" text-anchor="end">VOL. XXVI &#183; COMO, ITALY</text>
+
+  <!-- Mid rule -->
+  <line x1="40" y1="82" x2="860" y2="82" class="rule-thin" stroke-width="0.6" />
+
+  <!-- Wordmark -->
+  <text x="40" y="170" class="display ink-1" font-size="68" font-weight="500" letter-spacing="-1.2">Chuck Carpenter</text>
+
+  <!-- Hairline under name -->
+  <line x1="40" y1="195" x2="860" y2="195" class="rule-thin" stroke-width="0.5" />
+
+  <!-- Italic tagline -->
+  <text x="40" y="226" class="body ink-2" font-size="20" font-style="italic">A working notebook of professional and unprofessional pursuits.</text>
+
+  <!-- Mid rule -->
+  <line x1="40" y1="248" x2="860" y2="248" class="rule-thin" stroke-width="0.6" />
+
+  <!-- Bottom metadata band -->
+  <text x="40"  y="270" class="label ink-3" font-size="11" font-weight="700">EST. MM</text>
+  <text x="860" y="270" class="label ink-3" font-size="11" font-weight="700" text-anchor="end">HEAD OF ENGINEERING &#183; ANAGRAM</text>
+
+  <!-- Bottom double rule -->
+  <line x1="40" y1="288" x2="860" y2="288" class="rule-thick" stroke-width="0.6" />
+  <line x1="40" y1="296" x2="860" y2="296" class="rule-thick" stroke-width="2.5" />
+</svg>
