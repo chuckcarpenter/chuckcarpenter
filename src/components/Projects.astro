@@ -1,0 +1,32 @@
+---
+---
+
+<section id="projects" class="py-20 px-4 bg-background">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold text-primary mb-12 text-center uppercase">
+      Featured Projects
+    </h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {['Project Alpha', 'Project Beta', 'Project Gamma'].map((name, i) => (
+        <div class="bg-card border-4 border-primary p-6 hover:scale-105 transition-transform cursor-pointer group">
+          <div class="h-40 bg-muted mb-4 border-2 border-secondary flex items-center justify-center">
+            <p class="text-muted-foreground text-sm">[ Screenshot ]</p>
+          </div>
+          <h3 class="text-lg font-bold text-secondary mb-2 uppercase">{name}</h3>
+          <p class="text-foreground mb-4 text-sm">
+            A cutting-edge web application built with modern technologies and retro vibes.
+          </p>
+          <div class="flex gap-2 flex-wrap mb-4">
+            <span class="bg-primary text-primary-foreground px-2 py-1 text-xs font-bold uppercase">React</span>
+            <span class="bg-secondary text-secondary-foreground px-2 py-1 text-xs font-bold uppercase">Tailwind</span>
+            <span class="bg-accent text-accent-foreground px-2 py-1 text-xs font-bold uppercase">TypeScript</span>
+          </div>
+          <a href="#" class="text-accent hover:text-secondary transition-colors uppercase text-sm font-bold">
+            View Project →
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+---
+interface Props {
+  url: string;
+  // Human label for where it was originally published.
+  source?: string;
+}
+
+const { url, source = 'Ship Shape' } = Astro.props;
+---
+
+<div
+  style="border:2px outset #00ffff; background:#001a1a; color:#aaffff; padding:8px 10px; margin-bottom:12px; font-size:12px;"
+>
+  &#x1F4BE; This article was originally published on
+  <a href={url} target="_blank" rel="noopener" style="color:#00ffff; text-decoration:underline;">{source}
+    &raquo;</a>
+</div>

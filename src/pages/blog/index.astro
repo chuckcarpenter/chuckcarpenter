@@ -1,0 +1,63 @@
+---
+import { getCollection } from 'astro:content';
+import RetroPage from '../../layouts/RetroPage.astro';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+// Retro MM.DD.YYYY date, matching the original blog.
+const fmt = (d) =>
+  `${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')}.${d.getFullYear()}`;
+---
+
+<RetroPage
+  title="Blog — Chuck Carpenter"
+  description="Articles by Chuck Carpenter on JavaScript, GraphQL, serverless, and open source."
+>
+  <div class="construction" style="margin-bottom:10px;">
+    <img src="/under-construction.jpg" alt="under construction" style="height:30px; vertical-align:middle;" />
+    &nbsp; !! FRESH ARTICLEZ ADDED WHENEVER I FEEL LIKE IT !!
+  </div>
+
+  <div class="section-box">
+    <div class="section-title">&#x2605; MY ARTICLEZ &#x2605;</div>
+    <div class="section-body">
+      <p style="color:#00ffff; margin-bottom:10px;">
+        Stuff I've written about code over the years. <span class="blink">NEW!!</span>
+      </p>
+
+      {
+        posts.map((post) => (
+          <div class="project-card">
+            <div class="project-name">
+              <a href={`/blog/${post.slug}`}>&#x27A4; {post.data.title}</a>
+            </div>
+            <div style="color:#888; font-size:11px; margin-top:4px;">
+              {fmt(post.data.pubDate)}
+            </div>
+            <div style="color:#aaaaaa; font-size:12px; margin-top:4px;">
+              {post.data.description}
+            </div>
+            <div style="margin-top:4px;">
+              {post.data.tags.map((tag) => (
+                <span class="retro-tag">#{tag}</span>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  <div class="retro-hr"></div>
+
+  <div style="text-align:center;">
+    <a
+      href="/blog/rss.xml"
+      style="color:#000; background:#ff8800; border:3px outset #ffbb55; padding:6px 16px; font-weight:bold; font-size:13px; display:inline-block;"
+    >
+      &gt;&gt; SUBSCRIBE VIA RSS &lt;&lt;
+    </a>
+  </div>
+</RetroPage>

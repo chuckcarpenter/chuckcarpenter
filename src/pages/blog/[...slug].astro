@@ -1,0 +1,120 @@
+---
+import { getCollection } from 'astro:content';
+import RetroPage from '../../layouts/RetroPage.astro';
+import CanonicalNote from '../../components/CanonicalNote.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const fmt = (d) =>
+  `${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')}.${d.getFullYear()}`;
+---
+
+<RetroPage
+  title={`${post.data.title} — Chuck Carpenter`}
+  description={post.data.description}
+  canonicalUrl={post.data.canonicalUrl}
+>
+  <div class="section-box">
+    <div class="section-title">&#x2605; {post.data.title} &#x2605;</div>
+    <div class="section-body">
+      <div style="color:#888; font-size:11px; margin-bottom:6px;">
+        By Chuck Carpenter &bull; {fmt(post.data.pubDate)}
+      </div>
+      <div style="margin-bottom:10px;">
+        {post.data.tags.map((tag) => <span class="retro-tag">#{tag}</span>)}
+      </div>
+
+      {post.data.canonicalUrl && <CanonicalNote url={post.data.canonicalUrl} />}
+
+      <article class="post-body">
+        <Content />
+      </article>
+    </div>
+  </div>
+
+  <div class="retro-hr"></div>
+
+  <div style="text-align:center;">
+    <a
+      href="/blog"
+      style="color:#00ff00; font-size:13px; border:2px outset #00ff00; padding:4px 12px; background:#003300; text-decoration:none;"
+    >
+      &laquo; BACK TO ALL ARTICLEZ
+    </a>
+  </div>
+</RetroPage>
+
+<style is:global>
+  /* Make migrated article markup readable inside the retro theme. */
+  .post-body p {
+    margin-bottom: 12px;
+  }
+  .post-body h2 {
+    color: #ff00ff;
+    font-size: 20px;
+    margin: 18px 0 8px;
+    border-bottom: 2px solid #ff00ff;
+    padding-bottom: 2px;
+  }
+  .post-body h3 {
+    color: #00ffff;
+    font-size: 16px;
+    margin: 14px 0 6px;
+  }
+  .post-body a {
+    color: #00ffff;
+    text-decoration: underline;
+  }
+  .post-body a:visited {
+    color: #ff88ff;
+  }
+  .post-body ul,
+  .post-body ol {
+    margin: 0 0 12px 24px;
+  }
+  .post-body li {
+    margin-bottom: 4px;
+  }
+  .post-body img {
+    max-width: 100%;
+    height: auto;
+    border: 2px outset #888;
+    margin: 8px 0;
+  }
+  .post-body blockquote {
+    border-left: 4px solid #ff00ff;
+    padding: 4px 10px;
+    margin: 0 0 12px;
+    background: #000033;
+    color: #cccccc;
+  }
+  /* Inline code */
+  .post-body :not(pre) > code {
+    background: #000000;
+    color: #00ff00;
+    border: 1px solid #00aa00;
+    padding: 0 4px;
+    font-family: 'VT323', monospace;
+    font-size: 15px;
+  }
+  /* Shiki code blocks */
+  .post-body pre {
+    border: 2px inset #888;
+    padding: 10px;
+    overflow-x: auto;
+    margin-bottom: 12px;
+    font-size: 13px;
+  }
+  .post-body pre code {
+    font-family: 'Consolas', 'Courier New', monospace;
+  }
+</style>

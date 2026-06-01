@@ -1,0 +1,64 @@
+---
+import Layout from './Layout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteNav from '../components/SiteNav.astro';
+import SiteSidebar from '../components/SiteSidebar.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonicalUrl?: string;
+}
+
+const { title, description, canonicalUrl } = Astro.props;
+---
+
+<Layout title={title} description={description} canonicalUrl={canonicalUrl}>
+  <!-- MARQUEE TOP BAR -->
+  <marquee scrollamount="5">
+    &nbsp;&nbsp;&nbsp;
+    *** WELCOME TO MY HOMEPAGE *** | Software Developer &amp; Podcast Host |
+    *** THIS SITE IS ALWAYS UNDER CONSTRUCTION *** | est. 2001 |
+    *** SIGN MY GUESTBOOK *** | visitors: 1,337 |
+    *** BEST VIEWED IN INTERNET EXPLORER 6 AT 800x600 ***
+    &nbsp;&nbsp;&nbsp;
+  </marquee>
+
+  <!-- MAIN PAGE WRAPPER (780px fixed width like the good ol days) -->
+  <div style="width:780px; margin:0 auto; padding:8px;">
+
+    <SiteHeader />
+    <SiteNav />
+
+    <!-- RAINBOW DIVIDER -->
+    <div class="retro-hr"></div>
+
+    <!-- MAIN 2-COLUMN TABLE LAYOUT -->
+    <table width="100%" border="0" cellspacing="4" cellpadding="0" style="margin-bottom:6px;">
+      <tr>
+        <!-- LEFT SIDEBAR -->
+        <td class="sidebar" width="180" valign="top">
+          <SiteSidebar />
+        </td>
+
+        <!-- MAIN CONTENT COLUMN -->
+        <td class="main-content" valign="top" style="padding:10px;">
+          <slot />
+        </td>
+      </tr>
+    </table>
+
+    <!-- BOTTOM MARQUEE -->
+    <marquee scrollamount="3" direction="right">
+      &nbsp; &#9733; thx 4 visiting &#9733; &nbsp;
+      add me 2 ur favorites!! &nbsp;
+      &#9733; &nbsp; tell ur frends!! &nbsp; &#9733;
+    </marquee>
+
+    <SiteFooter />
+
+  </div>
+
+  <!-- BACKGROUND MIDI NOTE: auto-playing MIDI removed for legal reasons. imagine it's Enya. -->
+</Layout>

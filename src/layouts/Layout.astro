@@ -1,0 +1,33 @@
+---
+import '../styles/globals.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonicalUrl?: string;
+}
+
+const {
+  title = 'Chuck Carpenter — Software Developer & Podcast Host',
+  description = 'The personal homepage of Chuck Carpenter: software developer, host of the Whiskey Web and Whatnot podcast, and open source enthusiast.',
+  canonicalUrl,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon-light-32x32.png" />
+    <link rel="apple-touch-icon" href="/apple-icon.png" />
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,218 @@
+---
+import RetroPage from '../layouts/RetroPage.astro';
+import { getCollection } from 'astro:content';
+
+// Pull the 3 most recent posts to feature on the homepage.
+const recent = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+
+const fmt = (d) =>
+  `${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')}.${d.getFullYear()}`;
+---
+
+<RetroPage>
+  <!-- UNDER CONSTRUCTION NOTICE -->
+  <div class="construction" style="margin-bottom:10px;">
+    <img src="/under-construction.jpg" alt="under construction" style="height:30px; vertical-align:middle;" />
+    &nbsp; !! THIS PAGE IS UNDER CONSTRUCTION !! COME BACK TOMORROW !!
+  </div>
+
+  <!-- ABOUT ME SECTION -->
+  <div id="about" class="section-box">
+    <div class="section-title">&#x2605; ABOUT ME &#x2605;</div>
+    <div class="section-body">
+      <p>
+        Hi!! I'm <span class="rainbow">Chuck</span> — a software developer who's been
+        building for the web since back when the internet still made dial-up noises. &#x1F4BE;
+      </p>
+      <br />
+      <p>
+        I spent years at <span style="color:#ff00ff;">Ship Shape</span> building web
+        applications for clients, and these days I'm writing software at
+        <span style="color:#00ffff; font-weight:bold;">Anagram Security</span>. Along the
+        way I've been a maintainer of <a href="https://shepherdjs.dev" target="_blank" rel="noopener" style="color:#00ffff;">Shepherd.js</a>,
+        the open-source product tour library.
+      </p>
+      <br />
+      <p>
+        I also co-host <span style="color:#00ffff; font-weight:bold;">"Whiskey Web and Whatnot"</span>,
+        a podcast about web development, whiskey, and whatever else comes up, with my friend
+        Robbie Wagner. <span class="blink">NEW EPISODES OFTEN!!</span>
+      </p>
+      <br />
+      <p style="color:#ffff00;">
+        *** This site is best experienced with the lights off, a beverage in hand,
+        and a healthy tolerance for &lt;marquee&gt; tags. ***
+      </p>
+    </div>
+  </div>
+
+  <div class="retro-hr"></div>
+
+  <!-- LATEST POSTS SECTION -->
+  <div id="blog" class="section-box">
+    <div class="section-title">&#x2605; LATEST ARTICLEZ &#x2605;</div>
+    <div class="section-body">
+      {
+        recent.map((post) => (
+          <div class="project-card">
+            <div class="project-name">
+              <a href={`/blog/${post.slug}`}>&#x27A4; {post.data.title}</a>
+            </div>
+            <div style="color:#888; font-size:11px; margin-top:4px;">{fmt(post.data.pubDate)}</div>
+            <div style="color:#aaaaaa; font-size:12px; margin-top:4px;">{post.data.description}</div>
+          </div>
+        ))
+      }
+      <div style="text-align:center; margin-top:8px;">
+        <a href="/blog" style="color:#00ff00; font-size:12px; border:2px outset #00ff00; padding:3px 10px; background:#003300; text-decoration:none;">
+          &gt;&gt; READ ALL ARTICLEZ &lt;&lt;
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="retro-hr"></div>
+
+  <!-- PROJECTS SECTION -->
+  <div id="projects" class="section-box">
+    <div class="section-title">&#x2605; MY PROJECTS &#x2605;</div>
+    <div class="section-body">
+      <!-- TODO: confirm / expand this project list -->
+      <div class="project-card">
+        <div class="project-name">
+          <a href="https://shepherdjs.dev" target="_blank" rel="noopener">&#x27A4; Shepherd.js</a>
+          <span class="badge">OSS</span>
+        </div>
+        <div style="color:#aaaaaa; font-size:12px; margin-top:4px;">
+          Guide your users through a tour of your app. A lightweight, framework-agnostic
+          product tour library — one dependency, small bundle, fully customizable.
+        </div>
+        <div style="margin-top:4px;">
+          <span class="retro-tag">JavaScript</span>
+          <span class="retro-tag">open source</span>
+          <span class="retro-tag">tours</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-name">
+          <a href="https://whiskey.fm" target="_blank" rel="noopener">&#x27A4; Whiskey Web and Whatnot</a>
+          <span class="badge">PODCAST</span>
+        </div>
+        <div style="color:#aaaaaa; font-size:12px; margin-top:4px;">
+          A more relaxed, whiskey-fueled conversation about web development, the
+          tools we use, and the people who build the web.
+        </div>
+        <div style="margin-top:4px;">
+          <span class="retro-tag">podcast</span>
+          <span class="retro-tag">web dev</span>
+          <span class="retro-tag">whiskey</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="retro-hr"></div>
+
+  <!-- PODCAST SECTION -->
+  <div id="podcast" class="section-box">
+    <div class="section-title">&#x2605; WHISKEY WEB AND WHATNOT &#x2605;</div>
+    <div class="section-body">
+      <p style="color:#00ffff; margin-bottom:10px;">
+        A podcast about web development, whiskey, and whatnot — hosted by me and Robbie Wagner.
+        <span class="blink">*** SUBSCRIBE OR UR MISSING OUT ***</span>
+      </p>
+
+      <!-- TODO: wire up real episode + subscribe links -->
+      <div style="text-align:center; margin-top:10px;">
+        <a href="https://whiskey.fm" target="_blank" rel="noopener" style="color:#000; background:#ff00ff; border:3px outset #ff88ff; padding:6px 16px; font-weight:bold; font-size:13px; display:inline-block;">
+          &gt;&gt; LISTEN AT WHISKEY.FM &lt;&lt;
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="retro-hr"></div>
+
+  <!-- SKILLS SECTION -->
+  <div id="skills" class="section-box">
+    <div class="section-title">&#x2605; MY MAD SKILLZ &#x2605;</div>
+    <div class="section-body">
+      <table width="100%" cellpadding="4" cellspacing="0">
+        <tr>
+          <td width="120" style="color:#00ffff; font-size:12px;">JavaScript</td>
+          <td><div class="skill-bar-outer"><div class="skill-bar-inner" style="width:95%;"></div></div></td>
+          <td width="40" style="color:#00ff00; font-size:12px; text-align:right;">1337</td>
+        </tr>
+        <tr>
+          <td style="color:#00ffff; font-size:12px;">TypeScript</td>
+          <td><div class="skill-bar-outer"><div class="skill-bar-inner" style="width:90%;"></div></div></td>
+          <td style="color:#00ff00; font-size:12px; text-align:right;">pr0</td>
+        </tr>
+        <tr>
+          <td style="color:#00ffff; font-size:12px;">Node.js</td>
+          <td><div class="skill-bar-outer"><div class="skill-bar-inner" style="width:88%;"></div></div></td>
+          <td style="color:#00ff00; font-size:12px; text-align:right;">kewl</td>
+        </tr>
+        <tr>
+          <td style="color:#00ffff; font-size:12px;">Ember / React</td>
+          <td><div class="skill-bar-outer"><div class="skill-bar-inner" style="width:85%;"></div></div></td>
+          <td style="color:#00ff00; font-size:12px; text-align:right;">sick</td>
+        </tr>
+        <tr>
+          <td style="color:#00ffff; font-size:12px;">Open Source</td>
+          <td><div class="skill-bar-outer"><div class="skill-bar-inner" style="width:100%; background:linear-gradient(90deg,#ff0000,#ffff00,#00ff00);"></div></div></td>
+          <td style="color:#ffff00; font-size:12px; text-align:right;">GOD</td>
+        </tr>
+        <tr>
+          <td style="color:#00ffff; font-size:12px;">Picking Whiskey</td>
+          <td><div class="skill-bar-outer"><div class="skill-bar-inner" style="width:100%; background:linear-gradient(90deg,#ff0000,#ffff00,#00ff00);"></div></div></td>
+          <td style="color:#ffff00; font-size:12px; text-align:right;">GOD</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="retro-hr"></div>
+
+  <!-- GUESTBOOK -->
+  <div id="guestbook" class="section-box">
+    <div class="section-title">&#x2605; SIGN MY GUESTBOOK!! &#x2605;</div>
+    <div class="section-body">
+      <p style="color:#ffff00; margin-bottom:8px;">
+        plz sign my guestbook!! i check it every day!!! no spam or i will find u
+      </p>
+
+      <!-- existing entries -->
+      <div style="border:1px dashed #444; padding:8px; margin-bottom:8px; background:#000022;">
+        <div style="color:#00ffff; font-weight:bold; font-size:12px;">xX_c0d3r_Xx says:</div>
+        <div style="color:#ffffff; font-size:12px; margin-top:2px;">"omg ur site is sooooo kewl!!! i luv the marquee!! add me on AIM: c0derguy99"</div>
+        <div style="color:#666; font-size:11px; margin-top:2px;">March 3, 2001 &bull; 12:42am</div>
+      </div>
+      <div style="border:1px dashed #444; padding:8px; margin-bottom:8px; background:#000022;">
+        <div style="color:#00ffff; font-weight:bold; font-size:12px;">webmaster_gurl says:</div>
+        <div style="color:#ffffff; font-size:12px; margin-top:2px;">"nice page!! ur podcast is amazinggg. can we do a link exchange?? my site is at geocities.com/webmistress_gurl"</div>
+        <div style="color:#666; font-size:11px; margin-top:2px;">February 28, 2001 &bull; 9:17pm</div>
+      </div>
+
+      <form class="guestbook" onsubmit="alert('Guestbook entry saved!! ty 4 signing!!'); return false;">
+        <table width="100%" cellspacing="4">
+          <tr>
+            <td width="80" style="color:#00ffff; font-size:12px;">Name:</td>
+            <td><input type="text" placeholder="ur name or AIM handle" /></td>
+          </tr>
+          <tr>
+            <td style="color:#00ffff; font-size:12px;">Message:</td>
+            <td><textarea rows="3" placeholder="say something nice!!"></textarea></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><button type="submit">&gt;&gt; SIGN IT!! &lt;&lt;</button></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+</RetroPage>
